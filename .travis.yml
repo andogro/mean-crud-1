@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '5.3'
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.11'
+services: mongodb
+before_script:
+- npm install -g mocha
+script: mocha
+deploy:
+  provider: heroku
+  api_key:
+    secure: wtJabCrV9x1CXSZxeMqyF0APoV/fnXtzITJq5babF4a8HxiN63dqs+B5rW4iyfxiU8Pa9vkraUXPT6hvnJWsddlwraF94uiLq5HQ45DELe4fjXgrwvrw/EmDcboGXdx4LwHPYJPcscCUnQL+k1VkCYNqZhE33zSMJrdwpdaWXyzQj4bNtJaXpzGJBh7wvVr4OQgNWe42VjX2EPV26gnnG7oksE7pGPliNnN9RPeDCExrGJUdy52XM/aF+f1IPB76ZPv/LOGgF2BfkThb5TxcfkL8ALNS/5dr0xhkHeYwU7COjoj+eJrwo057JmVQoaYo+8T+Sju/eUUWpms63xUzKwNhc+l5XjUkqwqsGmpsAbgwscWLmGzcuCDvjLfPq/GjSW3zlpijsW4MNttWzjA+EuAmHNx6a3Mv70WtpzSiWaDtXzYFPRuLwftBB8GjxtnhUbf+26sR4xgzwPPqeWl5QGKtGDAT/qud/6GOGtwVc4oq2a1CbZaYNmvAGP1Mk1Ge18kEfSUHEf1AjnDnk6GjinUrZ8tLqjh3snxveWObkRLgiJVyYzt0xwEesFilqe5ypyXj8aLnILEgaQ1hm7quWdbJb172y+rPPS9bUsQvFu2iZYm9EtbVylZHAt4Pq1IGRpEuCQQtrt7qY/aLDLw19PCjDoMBL84EnX7gmbf54AU=
+  app: desolate-badlands-40065
+  on:
+    branch: master
+    node: '5'
+    repo: andogro/mean-crud-1
